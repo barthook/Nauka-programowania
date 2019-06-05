@@ -2,6 +2,7 @@
 <html lang="pl">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Przykładowa strona RWD</title>
 	
 	<style>
@@ -19,7 +20,7 @@
 			color:#434343;
 			background-color: gray;
 		}
-				a
+			a
 		{
 			color: black;
 			text-decoration: none;
@@ -30,7 +31,6 @@
 			width: 1050px;
 			margin-left: auto;
 			margin-right: auto;
-			
 		}
 		
 		header
@@ -58,7 +58,7 @@
 		{
 			margin-bottom: 5px;
 			background: #ffc000;
-			padding: 8px 20px;
+			padding: 10px;
 			text-align: center;
 		}
 		nav ul li :hover
@@ -69,7 +69,7 @@
 			color: white;
 		}
 		
-		main
+		#main
 		{
 			float: right;
 			width: 65%;
@@ -85,6 +85,28 @@
 			background-color: #121212;
 			padding: 15px 0 15px 0px;
 		}
+		
+		
+		
+	@media (max-width: 1050px) and (min-width: 750px)
+	{
+		#container {width: 90%;}
+		aside {width: 30%;}
+		#main {width: 60%;}
+	}
+
+	/*  responsywnosc ekranu */
+
+	@media only screen and (max-width: 750px)
+	{
+		#container {width: 90%;}
+		aside, #main {width: 100%;}
+	}
+	@media only screen and (max-width: 500px)
+	{
+		#container { width: 90%;}
+		aside, #main { width: 100%;}
+	}
 	</style>
 </head>
 <body>
@@ -108,14 +130,14 @@
 		</nav>
 	</aside>
 	
-		<main>
-			<h5>A dam se lorem</h5>
+		<div id="main">
+			<h2>A dam se lorem</h2>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultricies risus quis nisi ultricies, et aliquet metus sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget diam pharetra mauris aliquam efficitur sit amet eget leo. Proin feugiat, nulla eu accumsan vehicula, felis eros posuere metus, a aliquet turpis tellus ac dui. Sed ut est eu dui interdum ultricies in a dui. Sed sed lectus luctus, congue lacus eu, tristique purus. Proin eu justo et odio egestas facilisis. Cras a tempus est. Sed pellentesque, nunc sed tincidunt laoreet, odio tortor commodo metus, quis lacinia dolor dolor vitae turpis. Quisque porttitor, sem at maximus tincidunt, diam libero elementum augue, a gravida neque orci vel lacus. Phasellus sodales risus vel lacus egestas imperdiet. Pellentesque porttitor interdum augue, vitae laoreet velit vestibulum ut. Nulla facilisi. Sed placerat, nisl vel malesuada fringilla, nibh nibh aliquet justo, nec suscipit sapien metus eget dui. Praesent nulla magna, blandit ut finibus quis, viverra nec quam.
 			</p>
 			<p>
 				Vestibulum ut odio tincidunt, gravida velit quis, elementum nunc. Proin in scelerisque lorem, sollicitudin dapibus sapien. Quisque vulputate a lacus nec ultricies. Integer sit amet cursus ipsum. Vivamus aliquam dignissim sapien, nec lobortis ipsum rhoncus vitae. Morbi id commodo urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque sagittis lorem id facilisis gravida. Sed rutrum tellus a nunc dictum finibus. Etiam lacinia ante non ultricies lacinia. Vestibulum vehicula nec eros sed sodales.
-		</main>
+		</div>
 		
 		<footer>
 			Tutaj jest stopka, ogarniam RWD &copy
