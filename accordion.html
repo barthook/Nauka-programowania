@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset ="utf-8">
+	<title>Accordion panels</title>
+	
+	<style>
+		:root
+		{
+			background-color: #91a8c1;
+		}
+		#container
+		{
+			width: 50%;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: lightgray;
+			border: 1px solid black;
+			text-align: center;
+		}
+		.accordion
+		{
+			width: 100%;
+			background-color: #55ceed;
+			padding: 15px;
+			margin-top: 10px; 
+			margin-bottom: 10px; 
+			min-height: 20px;
+			text-align: left;
+			font-weight: 700;
+			letter-spacing: 1px;
+			cursor: pointer;
+			border: none;
+		}
+		.accordion:hover
+		{
+			background-color: #559eed;
+		}
+		
+		.panel
+		{
+			padding: 20px;
+			display: none;
+			background-color: white;
+			overflow: hidden;
+		}
+		
+		
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<button class="accordion">Sekcja 1</button>
+		<div class="panel">
+			<h1>Zawartosc w postaci lorem</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris est, lobortis at mi et, mollis ornare nisl. Suspendisse nisi augue, interdum at rhoncus sed, laoreet quis est. Etiam condimentum euismod metus. Proin tempus justo eget orci sagittis egestas. Proin finibus dui vitae hendrerit porta. Etiam sed tempor tortor. Vestibulum nec faucibus enim, vitae varius urna. Nullam non diam rutrum, rutrum felis vel, consequat velit. Vestibulum dapibus porta urna vitae posuere. Maecenas sagittis, odio nec vehicula fermentum, eros justo interdum mi, vel lobortis quam est at elit. Cras a molestie orci. In convallis leo turpis, id finibus sem consequat eget.
+
+			Mauris eget efficitur purus. Curabitur tempus sem ut risus consectetur, nec dignissim neque interdum. Nullam pellentesque vulputate erat et blandit. Curabitur elementum augue ex, eu suscipit libero viverra ut. Nullam consequat semper interdum. Praesent commodo dolor quis ante malesuada venenatis. Aenean tristique pellentesque justo, convallis hendrerit lectus dictum eu. Suspendisse id suscipit purus, sed auctor lacus. Nulla facilisi. Donec id volutpat tortor, in pharetra ipsum. Praesent sed libero diam. Quisque quis purus mauris. Duis sed lacus eget urna aliquet viverra.</p>
+		</div>
+		
+		<button class="accordion">Sekcja 2</button>
+		<div class="panel">
+			<h1>Zawartosc w postaci lorem</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris est, lobortis at mi et, mollis ornare nisl. Suspendisse nisi augue, interdum at rhoncus sed, laoreet quis est. Etiam condimentum euismod metus. Proin tempus justo eget orci sagittis egestas. Proin finibus dui vitae hendrerit porta. Etiam sed tempor tortor. Vestibulum nec faucibus enim, vitae varius urna. Nullam non diam rutrum, rutrum felis vel, consequat velit. Vestibulum dapibus porta urna vitae posuere. Maecenas sagittis, odio nec vehicula fermentum, eros justo interdum mi, vel lobortis quam est at elit. Cras a molestie orci. In convallis leo turpis, id finibus sem consequat eget.
+
+			Mauris eget efficitur purus. Curabitur tempus sem ut risus consectetur, nec dignissim neque interdum. Nullam pellentesque vulputate erat et blandit. Curabitur elementum augue ex, eu suscipit libero viverra ut. Nullam consequat semper interdum. Praesent commodo dolor quis ante malesuada venenatis. Aenean tristique pellentesque justo, convallis hendrerit lectus dictum eu. Suspendisse id suscipit purus, sed auctor lacus. Nulla facilisi. Donec id volutpat tortor, in pharetra ipsum. Praesent sed libero diam. Quisque quis purus mauris. Duis sed lacus eget urna aliquet viverra.</p>
+		</div>
+		
+		<button class="accordion">Sekcja 3</button>
+		<div class="panel">
+			<h1>Zawartosc w postaci lorem</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris est, lobortis at mi et, mollis ornare nisl. Suspendisse nisi augue, interdum at rhoncus sed, laoreet quis est. Etiam condimentum euismod metus. Proin tempus justo eget orci sagittis egestas. Proin finibus dui vitae hendrerit porta. Etiam sed tempor tortor. Vestibulum nec faucibus enim, vitae varius urna. Nullam non diam rutrum, rutrum felis vel, consequat velit. Vestibulum dapibus porta urna vitae posuere. Maecenas sagittis, odio nec vehicula fermentum, eros justo interdum mi, vel lobortis quam est at elit. Cras a molestie orci. In convallis leo turpis, id finibus sem consequat eget.
+
+			Mauris eget efficitur purus. Curabitur tempus sem ut risus consectetur, nec dignissim neque interdum. Nullam pellentesque vulputate erat et blandit. Curabitur elementum augue ex, eu suscipit libero viverra ut. Nullam consequat semper interdum. Praesent commodo dolor quis ante malesuada venenatis. Aenean tristique pellentesque justo, convallis hendrerit lectus dictum eu. Suspendisse id suscipit purus, sed auctor lacus. Nulla facilisi. Donec id volutpat tortor, in pharetra ipsum. Praesent sed libero diam. Quisque quis purus mauris. Duis sed lacus eget urna aliquet viverra.</p>
+		</div>
+	</div>
+	<script>	
+
+		var x = document.getElementsByClassName("accordion");
+		var i;
+		
+		for (i = 0; i < x.length; i++) {
+			x[ i ].addEventListener("click", function(){
+				this.classList.toggle("active");  
+				
+				var  panel = this.nextElementSibling; 
+				
+					if (panel.style.display === "block"){
+						panel.style.display = "none";
+					} else {
+						panel.style.display = "block";
+					}
+			});
+		}
+
+	</script>
+</body>
+</html>
