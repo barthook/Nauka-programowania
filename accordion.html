@@ -31,22 +31,36 @@
 			letter-spacing: 1px;
 			cursor: pointer;
 			border: none;
+			transition: 0.5s;
 		}
-		.accordion:hover
+			.active, .accordion:hover
 		{
 			background-color: #559eed;
 		}
 		
 		.panel
 		{
-			padding: 20px;
-			display: none;
 			background-color: white;
+			max-height: 0;
 			overflow: hidden;
+			transition: max-height .5s ease-out;
+		}
+		
+		.accordion::after 
+		{
+			content: "\002B";
+			font-size: 15px;
+			color: black;
+			float: right;
+			margin-left: 5px;
+		}
+		
+		.active::after
+		{
+			content: "\2212";
 		}
 		
 		
-
 	</style>
 </head>
 <body>
@@ -76,7 +90,7 @@
 		</div>
 	</div>
 	<script>	
-
+/*
 		var x = document.getElementsByClassName("accordion");
 		var i;
 		
@@ -91,6 +105,20 @@
 					} else {
 						panel.style.display = "block";
 					}
+			});
+		}
+*/
+
+		var x = document.getElementsByClassName("accordion");
+		var i;
+		
+		for( i = 0; i < x.length; i++){
+			x[ i ].addEventListener("click", function(){
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				if (panel.style.maxHeight){
+					panel.style.maxHeight = null;
+				} else { panel.style.maxHeight = panel.scrollHeight + "px"; }
 			});
 		}
 
