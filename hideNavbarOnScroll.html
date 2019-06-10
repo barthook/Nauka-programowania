@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>navbar</title>
+	<style>
+		body{
+			background-color: darkgrey;
+			margin: 0 !important;
+		}
+		#Nav{
+			display: block;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			background-color: #333;
+			transition: top .3s;
+		}
+		
+		#Nav a{
+			float: left;
+			display: block;
+			color: white;
+			text-align: center;
+			text-decoration:  none;
+			font-size: 25px;
+			padding: 20px;
+		}
+		
+		#Nav a:hover{
+			color: grey;
+			background-color: lightgrey;
+		}
+		
+		#hd{
+			margin-top: 100px;
+			padding: 10px;
+			text-align: center;
+			font-size: 25px;
+			width: 800px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	
+	</style>
+</head>
+<body>
+	<div id="Nav">
+		<a href="#">Home</a>
+		<a href="#">About</a>
+		<a href="#">Skills</a>
+		<a href="#">Contact</a>
+	</div>
+	<div id="hd">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at tincidunt lectus. Fusce venenatis eget nunc in aliquet. Vestibulum in nisl egestas, pretium neque eget, commodo libero. Praesent dui elit, tincidunt nec gravida rhoncus, varius eu turpis. Fusce non felis nec nisl bibendum sodales a sed est. Pellentesque eu sapien luctus, condimentum libero non, blandit orci. Morbi in tincidunt lacus. Fusce eleifend eleifend arcu sagittis mattis.</p>
+
+		<p>Sed tincidunt ornare enim, in rutrum lorem fermentum ac. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas molestie mauris a tristique convallis. Curabitur commodo pharetra aliquet. Etiam et suscipit tortor. Cras auctor nisl at magna elementum semper. Integer sed nulla volutpat, dignissim mi vitae, suscipit quam. Sed pretium urna ac feugiat porttitor. Nunc quis tempor libero. In et diam a risus faucibus vulputate id sit amet nunc. Suspendisse non ipsum condimentum, feugiat lacus nec, bibendum massa. Phasellus mi elit, rhoncus at nibh ornare, congue mollis risus.</p>
+
+		<p>Sed lorem est, dictum eu dictum vitae, viverra ut lorem. Donec placerat nisl hendrerit, euismod metus sed, fermentum diam. Maecenas molestie lacus eget sagittis pellentesque. Nulla efficitur elementum est in dapibus. Quisque odio eros, suscipit id commodo vitae, blandit et lorem. Vivamus ullamcorper massa pulvinar justo pretium gravida. Pellentesque non lectus auctor lacus cursus ultricies. Curabitur rhoncus volutpat sapien, eu convallis quam fringilla et. Nunc tortor turpis, iaculis ac nisi id, finibus porttitor magna. Nulla fermentum auctor est rutrum porta. Curabitur consectetur diam et augue semper tristique non ut turpis.</p>
+
+		<p>Suspendisse ac nisi eu erat convallis consequat ac quis urna. Aenean a augue sem. Sed fermentum hendrerit ante eget malesuada. Quisque aliquam est a felis consequat pulvinar. Donec aliquam, metus sit amet facilisis efficitur, nulla augue bibendum leo, vel ornare nulla enim quis ante. Phasellus id libero sed ante condimentum convallis ut id justo. Etiam dictum nunc vitae mattis scelerisque. Donec blandit quis elit sit amet pulvinar. Ut at eros at libero posuere suscipit ut id metus. Donec est lacus, pretium sit amet mauris vitae, commodo tristique dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla eget nisi sagittis, venenatis purus ac, elementum augue.</p>
+
+		<p>Sed tincidunt nisl ex, ac vestibulum nibh ullamcorper vitae. Aliquam egestas condimentum arcu, vitae hendrerit urna finibus ac. Integer et luctus nisi, efficitur aliquam lacus. Vestibulum ac pulvinar nulla, sed mollis lorem. Suspendisse finibus congue efficitur. Vivamus tincidunt vulputate lacus vel sagittis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce dui felis, varius eget arcu ac, condimentum vehicula velit. Aenean purus urna, iaculis eu elit eu, fermentum elementum nulla. In posuere, metus nec luctus sagittis, magna nisl condimentum diam, ut efficitur erat tellus non magna. Praesent blandit diam et convallis viverra. Fusce pellentesque, sem vitae sagittis porttitor, nisl nisi varius magna, in cursus nisi diam at urna.</p>
+	</div>
+	
+	<script>
+	var poz1 = window.pageYOffset;
+	
+	window.onscroll = function(){
+		var poz2 = window.pageYOffset;
+		if ( poz1 > poz2 ){
+			document.getElementById("Nav").style.top = "0";
+		} else {
+			document.getElementById("Nav").style.top = "-68px";
+		}
+			poz1 = poz2;
+	}
+	
+
+	</script>
+</body>
+</html>
