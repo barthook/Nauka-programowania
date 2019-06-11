@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>Tab Header</title>
+	<meta name="vievport" content="width=device-width, initial-scale=1">
+	<style>
+		body{
+			margin: 0px;
+		}
+		
+		.tablink{
+			background-color: #555;
+			color: white;
+			float: left;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 14px 16px;
+			font-size: 17px;
+			width: 25%;
+		}
+		
+		.tablink:hover{
+			background-color: #777;
+		}
+		
+		.tabconcent{
+			color: white;
+			display: none;
+			padding: 50px;
+			text-align: center;
+		}
+		
+		#London {background-color: red;}
+		#Paris {background-color: green;}
+		#Tokyo {background-color: blue;}
+		#Oslo {background-color: orange;}
+		
+	</style>
+</head>
+<body>
+
+	<button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen">London</button>
+	<button class="tablink" onclick="openCity('Paris', this, 'green')">Paris</button>
+	<button class="tablink" onclick="openCity('Tokyo', this, 'blue')">Tokyo</button>
+	<button class="tablink" onclick="openCity('Oslo', this, 'orange')">Oslo</button>
+
+	<div id="London" class="tabconcent">
+		<h1>London</h1>
+	</div>	
+	<div id="Paris" class="tabconcent">
+		<h1>Paris</h1>
+	</div>	
+	<div id="Tokyo" class="tabconcent">
+		<h1>Tokyo</h1>
+	</div>	
+	<div id="Oslo" class="tabconcent">
+		<h1>Oslo</h1>
+	</div>	
+
+	
+<script>
+	function openCity(cityName, elmnt, color){
+		var i, tabconcent, tablinks;
+		tabconcent = document.getElementsByClassName("tabconcent");  
+		for ( i = 0; i < tabconcent.length; i++){
+			tabconcent[ i ].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablink");
+		for ( i = 0; i < tablinks.length; i++){
+			tablinks[ i ].style.backgroundColor = "";
+		}
+		document.getElementById(cityName).style.display = "block";
+		elmnt.style.backgroundColor = color;
+	}
+	document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>
