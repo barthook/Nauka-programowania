@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta name="utf-8">
+	<title>ShrinkNavbar</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		
+		body{
+			background-color: lightgray;
+			margin: 0;
+		}
+		
+		#navbar{
+			width: 100%;
+			background-color: #bde8ef;
+			position: fixed;
+			z-index: 2;
+			padding: 90px 10px;
+			transition: 0.4s;
+			top: 0px;
+		}
+		
+		#navbar a{
+			float: left;
+			text-decoration: none;
+			color: black;
+			font-size: 24px;
+			line-height: 20px;
+			text-align: center;
+			padding: 12px;
+			font-weight: bold;
+		}
+		
+		#navbar-right{
+			float: right;
+		}
+		
+		#navbar a:hover{
+			background-color: #eee;
+			color: black;
+		}
+		
+		#navbar a.active{
+			background-color: blue;
+			color: white;
+		}
+		
+		#txt{
+			margin-top: 250px;
+			width: 800px;
+			font-size: 24px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+	</style>
+</head>
+<body>
+<div id="navbar">
+	<a href="#" id="logo">Logo</a>
+	<div id="navbar-right">
+		<a href="#" class="active">HOME</a>
+		<a href="#" >Contact</a>
+		<a href="#" >About</a>
+	</div>
+</div>
+	<div id ="txt">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sollicitudin aliquam ultrices sagittis orci a. Quis lectus nulla at volutpat diam ut venenatis tellus. Ac tincidunt vitae semper quis lectus nulla. A lacus vestibulum sed arcu non odio euismod lacinia at. Ornare lectus sit amet est placerat in egestas erat. Fermentum posuere urna nec tincidunt praesent semper feugiat. Duis at consectetur lorem donec massa sapien. Tempus iaculis urna id volutpat. Purus faucibus ornare suspendisse sed nisi lacus. Magna fringilla urna porttitor rhoncus dolor purus non. Amet porttitor eget dolor morbi non arcu risus quis varius. Tincidunt id aliquet risus feugiat in ante metus.
+
+		Eleifend mi in nulla posuere. Tellus orci ac auctor augue mauris augue. Tempor nec feugiat nisl pretium fusce id velit ut tortor. Tempor orci dapibus ultrices in iaculis. Nullam vehicula ipsum a arcu cursus vitae. Duis ut diam quam nulla porttitor. Nunc aliquet bibendum enim facilisis gravida neque convallis a cras. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Mattis vulputate enim nulla aliquet porttitor lacus luctus. Velit dignissim sodales ut eu sem integer. Scelerisque eu ultrices vitae auctor. Tellus integer feugiat scelerisque varius morbi enim nunc. Egestas sed tempus urna et. Sit amet purus gravida quis blandit turpis cursus in. Pretium viverra suspendisse potenti nullam ac. Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna.
+
+		Magna etiam tempor orci eu lobortis elementum. Dictum sit amet justo donec enim diam. Nisi quis eleifend quam adipiscing vitae proin. Scelerisque viverra mauris in aliquam. Ut enim blandit volutpat maecenas volutpat blandit aliquam. Ut placerat orci nulla pellentesque dignissim enim sit amet. Nullam vehicula ipsum a arcu cursus vitae congue. Egestas sed tempus urna et pharetra pharetra massa massa. Purus in mollis nunc sed id semper risus. Fermentum iaculis eu non diam. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Elementum integer enim neque volutpat ac tincidunt vitae. Sit amet justo donec enim. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Fermentum dui faucibus in ornare quam. Neque sodales ut etiam sit amet nisl purus. Blandit turpis cursus in hac habitasse. Morbi non arcu risus quis varius quam quisque id diam. Lobortis scelerisque fermentum dui faucibus in ornare quam viverra. Ac turpis egestas maecenas pharetra.
+	</div>
+
+<script>
+
+	window.onscroll = function scrollFunction(){
+		if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+			document.getElementById("navbar").style.padding = "30px 10px";
+			document.getElementById("logo").style.fontSize= "25px";
+			} else {
+			document.getElementById("navbar").style.padding = "80px 10px";
+			document.getElementById("logo").style.fontSize= "35px";
+		}
+	}
+	
+	
+</script>
+</body>
+</html>
